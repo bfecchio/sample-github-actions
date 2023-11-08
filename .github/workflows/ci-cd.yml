@@ -1,0 +1,26 @@
+# Definindo o nome do Workflow
+name: CI / CD Pipeline
+
+# Defindo quando o Workflow será disparado
+on:
+  push:
+    branches: [ main ]
+
+# Definindo os jobs que o Workflow executará
+jobs:
+  build-and-test:        
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
