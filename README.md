@@ -1,2 +1,1 @@
-![example workflow](https://github.com/OWNER/REPOSITORY/actions/workflows/ci-cd.yml/badge.svg)
-
+![GH Actions Demo](https://github.com/bfecchio/sample-github-actions/actions/workflows/ci-cd.yml/badge.svg)
